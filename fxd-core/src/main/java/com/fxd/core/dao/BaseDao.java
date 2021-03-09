@@ -17,4 +17,5 @@ public interface BaseDao<T extends BaseEntity,S extends SearchCondition> {
     T getById(String id);
     List<T> search(S s);
     Integer searchCount(S s);
+
 }

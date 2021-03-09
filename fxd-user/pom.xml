@@ -62,6 +62,8 @@
 <!--            <artifactId>mybatis-plus-boot-starter</artifactId>-->
 <!--            <version>3.4.1</version>-->
 <!--        </dependency>-->
+
+<!--        mybatis-plus插件，有crud的功能 和 自动生成controller,service,mapper,xml的代码的工具-->
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-generator</artifactId>
@@ -79,7 +81,11 @@
             </exclusions>
         </dependency>
 
-<!--        &lt;!&ndash; mysql &ndash;&gt;-->
+
+
+
+
+        <!--        &lt;!&ndash; mysql &ndash;&gt;-->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
