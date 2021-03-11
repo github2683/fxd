@@ -6,6 +6,7 @@ import com.google.code.kaptcha.Producer;
 import org.apache.tomcat.util.http.fileupload.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.imageio.ImageIO;
@@ -21,6 +22,7 @@ import java.io.IOException;
  * @Date 2021/3/8 10:18
  */
 @RestController
+@RequestMapping("/user")
 public class LoginController {
     @Autowired
     private Producer producer;
@@ -40,4 +42,5 @@ public class LoginController {
         ImageIO.write(image,"jpg",outputStream);
         IOUtils.closeQuietly(outputStream);
     }
+
 }
