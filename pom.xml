@@ -17,7 +17,6 @@
         <module>fxd-user</module>
         <module>fxd-common</module>
         <module>fxd-core</module>
-        <module>fxd-monitor</module>
     </modules>
     <packaging>pom</packaging>
 
