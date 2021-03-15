@@ -1,0 +1,16 @@
+server:
+  port: 8501
+spring:
+  application:
+    name: fxd-hystrix
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        service-name: ${spring.application.name}
+turbine:
+  instanceUrlSuffix:  hystrix.stream
+  app-config: fxd-user  #指定要收集的服务名，多个以英文逗号分开
+  cluster-name-expression: "'default'"  #指定集群名称，若为default则为默认集群，多个集群则通过此配置区分
+  combine-host-port: true  # 默认为false,服务以host进行区分，若设置为true,则以 host+post进行区分

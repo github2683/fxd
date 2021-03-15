@@ -3,3 +3,9 @@ server:
 spring:
   application:
     name: fxd-contrl
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        service-name: ${spring.application.name}
