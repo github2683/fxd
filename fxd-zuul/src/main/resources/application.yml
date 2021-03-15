@@ -1,0 +1,23 @@
+server:
+  port: 8010
+spring:
+  application:
+    name: fxd-zuul
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        service-name: ${spring.application.name}
+
+# 都不配置，默认访问zuul主机端口加服务名即能访问到对应的服务
+# http://localhost:8010/ribbon/call 会访问到 fxd-user
+# http://localhost:8010/feign/call 会访问到 fxd-union
+#zuul:
+#  routes:
+#    ribbon:
+#      path: /ribbon/**
+#      serviceId:  fxd-user  #转发到消费者 /ribbon/
+#    feign:
+#      path: /feign/**
+#      serviceId:  fxd-union #转发到消费者 /feign/
