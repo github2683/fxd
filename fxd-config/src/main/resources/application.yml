@@ -1,0 +1,19 @@
+server:
+  port: 8020
+spring:
+  application:
+    name: fxd-config
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        service-name: ${spring.application.name}
+    config:
+      label: master  # git 分支
+      server:
+        git:
+          uri:  C:/gitspace/server/fxd-config/.git/ # git 地址
+          search-paths: user  # git地址下的相对地址，可配置多个英语逗号分开
+#          username: root
+#          password: root
