@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: fxd-user
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        instance-id: ${spring.application.name}:${server.port}
+    config:
+      discovery:
+        enabled: true
+        service-id: fxd-config # 配置中心的服务名
+      name: user # 对应在配置中心的配置文件名 的 application。  配置文件名会写成 user-pro.yml
+      profile: dev # 对应在配置中心的配置文件名 的 profile,即文件名的后缀，如果 user-dev.yml
+      label: master # git的分支
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest

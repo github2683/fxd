@@ -10,8 +10,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>fxd-union</artifactId>
-
+    <artifactId>fxd-product</artifactId>
 
     <dependencies>
         <dependency>
@@ -19,24 +18,13 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-consul-discovery</artifactId>
+            <groupId>com.zhc</groupId>
+            <artifactId>fxd-core</artifactId>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-feign -->
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-openfeign</artifactId>
-<!--            <version>1.4.7.RELEASE</version>-->
+            <groupId>com.zhc</groupId>
+            <artifactId>fxd-common</artifactId>
         </dependency>
-
-
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-dependencies</artifactId>
-<!--            <version>Hoxton.SR8</version>-->
-            <type>pom</type>
-            <scope>runtime</scope>
-        </dependency>
-
     </dependencies>
+
 </project>

@@ -1,9 +1,6 @@
 server:
   port: 8081
-
 spring:
-  application:
-    name: fxd-user
   datasource:
     name: druidDataSource
     type: com.alibaba.druid.pool.DruidDataSource
@@ -29,16 +26,12 @@ spring:
   mybatis:
     mapper-locations: classpath:mapper/*.xml #注意：一定要对应mapper映射xml文件的所在路径
     type-aliases-package: com.fxd.user.entity # 注意：对应实体类的路径
-  cloud:
-    consul:
-      host: localhost
-      port: 8500
-      discovery:
-        instance-id: ${spring.application.name}:${server.port}
   boot:
     admin:
       client:
         url: "http://localhost:8000"
+  application:
+    name: fxd-user
 management:
   endpoints:
     web:

@@ -14,6 +14,14 @@ spring:
       server:
         git:
           uri:  C:/gitspace/server/fxd-config/.git/ # git 地址
-          search-paths: user  # git地址下的相对地址，可配置多个英语逗号分开
+          search-paths: user,union  # git地址下的存放配置文件的目录，可配置多个英语逗号分开
 #          username: root
 #          password: root
+# 每个客户端也要加配置加依赖加代码   这里说的客户端就是需要通过git提交修改配置信息的项目
+
+  #rabbitmq配置
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
