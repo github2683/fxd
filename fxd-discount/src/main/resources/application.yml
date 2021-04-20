@@ -1,0 +1,9 @@
+server:
+  port: 8801
+spring:
+  application:
+    name: fxd-discount
+  cloud:
+    nacos:
+      discovery:
+      server-addr: http://localhost:8848/
