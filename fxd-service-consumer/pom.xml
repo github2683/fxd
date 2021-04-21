@@ -11,26 +11,35 @@
 
     <artifactId>fxd-service-consumer</artifactId>
 
-
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!-- spring-cloud-alibaba 2021.1 版本  -->
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
     <dependencies>
-        <!-- nacos配置中心 2021.1 版本  -->
+        <!-- nacos 配置中心 2021.1 版本  -->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
         </dependency>
-        <!-- nacos注册中心 2021.1 版本  -->
+        <!-- nacos 注册中心 2021.1 版本  -->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
         </dependency>
-        <!-- spring cloud 微服务 -->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-dependencies</artifactId>
-            <!--            <version>Hoxton.SR8</version>-->
-            <type>pom</type>
-            <scope>runtime</scope>
-        </dependency>
+
         <!-- spring boot 项目  -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
